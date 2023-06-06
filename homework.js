@@ -1,8 +1,8 @@
 class Hamster {
-    constructor(owner, name, price){
-        this.owner = owner
-        this.name = name 
-        this.price = price
+    constructor(name){
+        this.owner = ""; 
+        this.name = name;  
+        this.price = 15
     }
     wheelRun(){
         console.log("squeek squeek"); 
@@ -15,15 +15,45 @@ class Hamster {
     }
 }
 
-const jollyRoger = [new Pirate("Kirk",54,"Enterprise"), 
-                    new Pirate("Jack",35,"Titanic"),
-                    new Pirate("Ahab",42,"MayFlower")
-                    ]
-
-const blackPearl = [new Pirate("Magellan",54,"Lusitania"), 
-                    new Pirate("Nemo",35,"Bounty"),
-                    new Pirate("Cook",35,"Beagle")
-                    ]
-
-console.log(jollyRoger)
-console.log(blackPearl)
+class Person {
+    constructor(name){
+        this.name = name 
+        this.age = 0
+        this.height = 0
+        this.weight = 0
+        this.mood = 0 
+        this.hamsters = [0]
+        this.bankAccount = 0
+    }
+    getName(){
+        console.log("Name is:", this.name); 
+    }
+    getAge(){
+        console.log("Age is:", this.age); 
+    }
+    getWeight(){
+        console.log("Weight is:", this.weight); 
+    }
+    greet(){
+        console.log("Hello", this.name); 
+    }
+    eat(){
+        this.weight += 5; 
+        this.mood += 1;  
+    }
+    exercise(){
+        this.weight -= .005; 
+    }
+    ageUp(){
+        this.age += 1;
+        this.height += .01; 
+        this.weight += .01; 
+        this.mood -= .5; 
+        this.bankAccount -+ 10; 
+    }
+    buyHamster(hamster){
+        hamsters.push(new Hamster("Bob", "Squeeky", 15)); 
+        this.mood += 10; 
+        this.bankAccount -= getPrice()
+    }
+}
